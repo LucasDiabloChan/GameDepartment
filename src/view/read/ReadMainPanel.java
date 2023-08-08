@@ -3,6 +3,7 @@ package view.read;
 import data.Game;
 import data.PreparedGamesDao;
 import java.awt.Color;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class ReadMainPanel extends javax.swing.JFrame {
@@ -11,7 +12,7 @@ public class ReadMainPanel extends javax.swing.JFrame {
         this.setBackground(Color.lightGray);
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked") 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -120,11 +121,11 @@ public class ReadMainPanel extends javax.swing.JFrame {
         PreparedGamesDao gd = new PreparedGamesDao();
         
         if(gd.createDBConex()){
-            Game jogo = gd.makeReadQueryByGameName(key);
+            List<Game> jogo = gd.makeReadQueryByGameName(key);
             
             if(jogo != null){
                 ShowGameInfo edj = new ShowGameInfo();
-                edj.setMultipleValues(jogo);
+                //edj.setMultipleValues(jogo);
                 edj.setVisible(true);
             }
         }
