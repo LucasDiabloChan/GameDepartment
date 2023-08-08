@@ -174,12 +174,6 @@ public class ReadMainPanel extends javax.swing.JFrame {
         return campoBuscar.getText();
     }
     
-    //public int getCampoBuscar(){
-    //    return Integer.parseInt(campoBuscar.getText());
-    //}
-    
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoBuscar;
     private javax.swing.JComboBox<String> caixaDeOpcoes;
